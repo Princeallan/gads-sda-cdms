@@ -32,9 +32,8 @@ Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
         ->name('login');
     Route::get('admin/login', Login::class)
-        ->name('login');
-    Route::get('/', Login::class)
-        ->name('login');
+        ->name('filament.auth.login');
+    Route::get('/', Login::class);
 
     Route::get('register', Register::class)
         ->name('register');

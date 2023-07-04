@@ -6,8 +6,14 @@ namespace App\Providers;
 use App\Models\Property;
 use App\Models\PropertyStatus;
 use App\Models\PropertyType;
+use App\Models\User;
+use App\Policies\PermissionPolicy;
 use App\Policies\PropertyPolicy;
+use App\Policies\RolePolicy;
+use App\Policies\UserPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -17,9 +23,9 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        Property::class => PropertyPolicy::class,
-        PropertyType::class => PropertyPolicy::class,
-        PropertyStatus::class => PropertyPolicy::class
+        Role::class => RolePolicy::class,
+        Permission::class => PermissionPolicy::class,
+        User::class => UserPolicy::class
     ];
 
     /**
