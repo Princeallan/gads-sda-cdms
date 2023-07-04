@@ -22,10 +22,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PropertyController::class, 'render'])->name('home');
-Route::get('property/{id}', [PropertyController::class, 'show'])->name('show');
-Route::get('/search', [PropertyController::class, 'search'])->name('search');
-
 Route::get('password/reset', Email::class)
     ->name('password.request');
 
@@ -35,8 +31,9 @@ Route::get('password/reset/{token}', Reset::class)
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
         ->name('login');
-
     Route::get('admin/login', Login::class)
+        ->name('login');
+    Route::get('/', Login::class)
         ->name('login');
 
     Route::get('register', Register::class)
