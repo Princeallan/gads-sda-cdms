@@ -15,19 +15,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         \App\Models\Property::factory(50)->create();
         $this->call([
-            PropertyTypeSeeder::class,
-            PropertyStatusSeeder::class,
-            CategorySeeder::class,
-            LocationSeeder::class
+//            PropertyTypeSeeder::class,
+//            PropertyStatusSeeder::class,
+//            CategorySeeder::class,
+//            LocationSeeder::class
+            RolesAndPermissionsSeeder::class
         ]);
 
-        User::factory()->create([
-            'email' => 'demoadmin@example.com',
-            'name' => 'Demo Admin',
-            'password' => bcrypt('Secret123!'),
-            'email_verified_at' => Carbon::now()
-        ]);
+//         \App\Models\Property::factory(50)->create();
+//        User::factory()->create([
+//            'email' => 'demoadmin@example.com',
+//            'name' => 'Demo Admin',
+//            'password' => bcrypt('Secret123!'),
+//            'email_verified_at' => Carbon::now()
+//        ]);
     }
 }
