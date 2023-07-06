@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\ProspectResource\Pages;
+namespace App\Filament\Resources\CounsellingRequestResource\Pages;
 
-use App\Filament\Resources\ProspectResource;
+use App\Filament\Resources\CounsellingRequestResource;
 use Filament\Pages\Actions;
-use Filament\Resources\Pages\ManageRecords;
+use Filament\Resources\Pages\CreateRecord;
 
-class ManageProspects extends ManageRecords
+class CreateCounsellingRequest extends CreateRecord
 {
-    protected static string $resource = ProspectResource::class;
+    protected static string $resource = CounsellingRequestResource::class;
 
     protected function getActions(): array
     {

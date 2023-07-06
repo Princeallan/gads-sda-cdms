@@ -21,13 +21,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Filament::serving(function () {
-            Filament::registerNavigationItems([
-                NavigationItem::make('Counselling Requests')
-                    ->url('/admin')
-                    ->icon('heroicon-o-support')
-                    ->sort(3),
-            ]);
-        });
+//        Filament::serving(function () {
+//            Filament::registerNavigationItems([
+//                NavigationItem::make('Counselling Requests')
+//                    ->url('/admin')
+//                    ->icon('heroicon-o-support')
+//                    ->sort(3),
+//            ]);
+//        });
     }
 }

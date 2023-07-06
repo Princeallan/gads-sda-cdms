@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prospects', function (Blueprint $table) {
+        Schema::create('hemispheres', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->nullable();
-            $table->string('phone')->nullable();
-            $table->foreignId('hemisphere_id')->nullable();
-            $table->foreignId('division_id')->nullable();
-            $table->foreignId('location_id')->nullable();
+            $table->foreignId('user_id')->nullable();
             $table->boolean('is_active')->default(1);
-            $table->foreignId('user_id')->default(1);
             $table->timestamps();
         });
     }
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prospects');
+        Schema::dropIfExists('hemispheres');
     }
 };

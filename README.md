@@ -27,8 +27,4 @@ Coming soon.......
 #### Login credentials: 
     Email : admin@admin.com
     Password: password
-
 ---
-- Also, you can register in the fronted in case the given credentials fail
-- To Navigate between the dashboard and backend of the system,
-there is a buttons **Dashboard** button after login and **Frontend** in the sidebar in the admin panel
