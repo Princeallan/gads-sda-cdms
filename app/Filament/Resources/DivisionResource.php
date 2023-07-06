@@ -20,6 +20,7 @@ class DivisionResource extends Resource
     protected static ?string $navigationGroup = 'Settings';
 
     protected static ?string $navigationIcon = 'heroicon-o-map';
+    protected static ?int $navigationSort = 4;
 
     public static function form(Form $form): Form
     {

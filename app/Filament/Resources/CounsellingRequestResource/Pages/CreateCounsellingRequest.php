@@ -10,14 +10,10 @@ class CreateCounsellingRequest extends CreateRecord
 {
     protected static string $resource = CounsellingRequestResource::class;
 
-    protected function getActions(): array
+    protected function mutateFormDataBeforeCreate(array $data): array
     {
-        return [
-            Actions\CreateAction::make()->mutateFormDataUsing(function (array $data): array {
-                $data['user_id'] = auth()->id();
+        $data['user_id'] = auth()->id();
 
-                return $data;
-            }),
-        ];
+        return $data;
     }
 }

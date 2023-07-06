@@ -20,7 +20,7 @@ class HemisphereResource extends Resource
     protected static ?string $navigationGroup = 'Settings';
 
     protected static ?string $navigationIcon = 'heroicon-o-globe';
-
+    protected static ?int $navigationSort = 5;
 
     public static function form(Form $form): Form
     {
