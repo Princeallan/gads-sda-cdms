@@ -56,6 +56,7 @@ class EventResource extends Resource
                 Tables\Columns\IconColumn::make('is_active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('user.name'),
+                Tables\Columns\ImageColumn::make('thumbnail'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->date(),
             ])
