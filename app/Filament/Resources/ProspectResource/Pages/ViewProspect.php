@@ -14,6 +14,11 @@ class ViewProspect extends ViewRecord
     {
         return [
             Actions\EditAction::make(),
+            //                Action::make('Update')
+//                    ->color('success')
+//                    ->icon('heroicon-o-user-add')
+//                    ->url(fn (Prospect $record): string => ProspectResource1::getUrl('update', ['record' => $record]))
+
         ];
     }
 }

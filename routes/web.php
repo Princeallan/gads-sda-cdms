@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\PropertyController;
@@ -45,11 +46,13 @@ Route::middleware('auth')->group(function () {
 
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
-//});
-//Route::middleware('auth')->group(function () {
+
     Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
         ->middleware('signed')
         ->name('verification.verify');
+
+    Route::post('convert-prospect', [UserController::class, 'convertProspect'])
+        ->name('convert.prospect');
 
     Route::post('logout', LogoutController::class)
         ->name('logout');
