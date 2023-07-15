@@ -4,20 +4,16 @@ namespace App\Filament\Resources\ProspectResource\Pages;
 
 use App\Filament\Resources\ProspectResource;
 use Filament\Pages\Actions;
-use Filament\Resources\Pages\ManageRecords;
+use Filament\Resources\Pages\ViewRecord;
 
-class ManageProspects extends ManageRecords
+class ViewProspect extends ViewRecord
 {
     protected static string $resource = ProspectResource::class;
 
     protected function getActions(): array
     {
         return [
-            Actions\CreateAction::make()->mutateFormDataUsing(function (array $data): array {
-                $data['user_id'] = auth()->id();
-
-                return $data;
-            }),
+            Actions\EditAction::make(),
         ];
     }
 }
